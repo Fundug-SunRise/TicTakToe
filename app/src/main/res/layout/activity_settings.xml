@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="260dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="80dp"
+        android:gravity="center"
+
+        android:text="Settings"
+        android:textColor="@color/base_color"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/soundText"
+        android:layout_width="126dp"
+        android:layout_height="31dp"
+
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="38dp"
+        android:gravity="center|left"
+        android:text="Sound"
+        android:textColor="@color/base_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/soundSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/difficultyText"
+        android:layout_width="126dp"
+        android:layout_height="31dp"
+
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="249dp"
+        android:gravity="center|left"
+        android:text="Difficulty"
+        android:textColor="@color/base_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soundSeekBar"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/difficultyTextChage"
+        android:layout_width="126dp"
+        android:layout_height="31dp"
+
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="center"
+        android:text="Easy"
+        android:textColor="@color/base_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/arrowRight"
+        app:layout_constraintEnd_toStartOf="@+id/arrowRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/arrowLeft"
+        app:layout_constraintTop_toTopOf="@+id/arrowRight"
+        app:layout_constraintVertical_bias="0.341"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+
+        android:onClick="backButton"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_left_bold_circle_outline"
+        tools:ignore="ContentDescription,HardcodedText,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <SeekBar
+        android:id="@+id/soundSeekBar"
+        android:layout_width="340dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <ImageView
+        android:id="@+id/arrowLeft"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:onClick="clickChangeDifficulty"
+
+        android:src="@drawable/arrow_triangle_left"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyText"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/arrowRight"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="clickChangeDifficulty"
+
+        android:src="@drawable/arrow_triangle_right"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyText"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
